@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/gameoflife.js"></script>
+</head>
+
+<body>
+    <canvas width="500" height="500"></canvas>
+    <h1>
+        <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a>
+    </h1>
+    <ol>
+        <li>1.Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.</li>
+        <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+        <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+        <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+    </ol>
+    <br/> Canvas Size:
+    <input type="number" value="500" min="100" max="2000" id="canvasSizeInput" />px
+    <input type="button" value="Submit" id="setCanvasSize" />
+    <br/> Tile Size:
+    <input type="number" value="10" min="1" max="50" id="tileSizeInput" />px
+    <input type="button" value="Submit" id="setTileSize" />
+    <br/>
+    <br/>
+    <input type="button" value="Tick" id="tickButton">
+    <input type="button" value="Clear" id="clearButton">
+    <input type="button" value="Randomize" id="randomizeButton">
+    <br/>
+    <br/>
+    <input type="button" value="Start" id="startButton">
+    <input type="button" value="Stop" id="stopButton"> Speed:
+    <input type="range" min="0.1" max="1" step="0.1" value="0.1" id="speedSlider">
+    <h2>Instructions:</h2>
+    <p>
+        Click on the canvas to toggle individual cells or click "Randomize".
+        <br/> Then, start the simulation or advance it one step at a time by clicking "Tick".
+    </p>
+    <script type="text/javascript" src="js/gui.js"></script>
+</body>
+
+</html>
